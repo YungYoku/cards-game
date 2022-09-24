@@ -1,0 +1,10 @@
+@font-face {
+    font-family: "Soup Of Justice";
+    src: url("../assets/fonts/soupOfJustice.ttf") format("truetype");
+    font-weight: 700;
+    font-style: normal;
+}
+
+* {
+    font-family: 'Soup Of Justice', sans-serif;
+}

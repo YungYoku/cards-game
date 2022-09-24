@@ -1,0 +1,16 @@
+@import "reset.css";
+@import "font.css";
+@import "app.css";
+
+body {
+    overflow: hidden;
+    background-color: #6dced5;
+}
+
+.hide {
+    display: none !important;
+}
+
+.hide-popup {
+    transform: translateY(-100vh);
+}

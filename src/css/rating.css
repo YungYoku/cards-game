@@ -1,0 +1,181 @@
+.rating {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 2;
+    transition: all 0.5s;
+}
+
+.rating__board {
+    width: 568px;
+    max-height: 80%;
+    background-image: url("../assets/images/rating__board.png");
+    background-size: 568px 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+    display: grid;
+    padding: 10vh 90px 80px 90px;
+}
+
+.rating__board__scoresWrap {
+    overflow: hidden;
+    width: 100%;
+    height: 40vh;
+}
+
+.rating__board__scores {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    overflow-y: scroll;
+    padding-right: 30px;
+    border-radius: 20px;
+}
+
+.rating__board__scores {
+    scrollbar-width: none;
+}
+
+.rating__board__scores::-webkit-scrollbar {
+    height: 0;
+    width: 0;
+}
+
+.rating__board__scores__item {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.rating__board__scores__item > img {
+    width: 110px;
+    height: 110px;
+}
+
+.rating__board__scores__item h2 {
+    color: #333333;
+    font-size: 32px;
+}
+
+.rating__board__scores__item h3 {
+    color: #047d9b;
+    font-size: 46px;
+}
+
+.rating__board__scores__item > button {
+    border-radius: 25px;
+    overflow: hidden;
+}
+
+.rating__board__scores__item > button,
+.rating__board__scores__item > button > img {
+    max-width: 120px;
+}
+
+.rating__board__scroll {
+    position: absolute;
+    right: 80px;
+    top: 15%;
+    width: 20px;
+    height: 40vh;
+    background-image: url("../assets/images/rating__scrollbar.png");
+    background-position: center;
+    background-size: 20px 100%;
+    background-repeat: no-repeat;
+}
+
+.rating__board__scroll__controller {
+    position: absolute;
+    left: -10px;
+    height: 40px;
+    width: 40px;
+    background-image: url("../assets/images/settings__btnOff.png");
+    background-position: center;
+    background-size: 40px 40px;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+@media screen and (max-width: 768px) {
+    .rating__board {
+        width: 500px;
+        background-size: 100% 100%;
+    }
+
+    .rating__board__scores__item > img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .rating__board__scores__item h2 {
+        font-size: 24px;
+    }
+
+    .rating__board__scores__item h3 {
+        font-size: 34px;
+    }
+
+    .rating__board__scores__item > button {
+        border-radius: 15px;
+    }
+
+    .rating__board__scores__item > button,
+    .rating__board__scores__item > button > img {
+        max-width: 90px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .rating__board {
+        width: 90%;
+        padding: 10vh 90px 80px 80px;
+    }
+
+    .rating__board__scores {
+        border-radius: 10px;
+    }
+
+    .rating__board__scores__item > img {
+        width: 60px;
+        height: 60px;
+    }
+
+    .rating__board__scores__item h2 {
+        font-size: 20px;
+    }
+
+    .rating__board__scores__item h3 {
+        font-size: 26px;
+    }
+
+    .rating__board__scores__item > button {
+        border-radius: 15px;
+    }
+
+    .rating__board__scores__item > button,
+    .rating__board__scores__item > button > img {
+        max-width: 70px;
+    }
+}
+
+@media screen and (max-width: 460px) {
+    .rating__board {
+        width: 90%;
+        padding: 10vh 65px 80px 55px;
+    }
+
+    .rating__board__scroll {
+        right: 55px;
+    }
+}

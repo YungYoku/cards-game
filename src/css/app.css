@@ -1,0 +1,45 @@
+@import "menu.css";
+@import "popup.css";
+@import "game.css";
+@import "settings.css";
+@import "rating.css";
+
+.app {
+    width: 100%;
+    height: 100vh;
+    background-color: #6dced5;
+    position: absolute;
+    top: 100vh;
+    transition: all 1s;
+}
+
+.app > div {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.clouds {
+    background-color: #6dced5;
+    position: absolute;
+    top: -100vh;
+    left: 0;
+    transition: all 1s;
+}
+
+.clouds > img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 2;
+}
+
+.startSmallClouds {
+    animation: smallClouds 20s linear infinite;
+}
+
+.startBigClouds {
+    animation: bigClouds 60s linear infinite;
+}
