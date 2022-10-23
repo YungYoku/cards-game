@@ -1,6 +1,6 @@
 {
   "appId": "cards_game.ru",
-  "appName": "cards-game",
+  "appName": "Cards game",
   "webDir": "dist",
   "bundledWebRuntime": false
 }
