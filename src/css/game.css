@@ -1,173 +1,191 @@
-@import 'card.css';
+@import "card.css";
 @import "pause.css";
 @import "win.css";
 @import "lose.css";
 
 .game {
-    transition: all 1s;
-    position: absolute;
-    background-color: #6dced5;
-    top: -100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  position: absolute;
+  top: -100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: #6dced5;
+
+  transition: all 1s;
 }
 
 .showAnimation {
-    opacity: 0;
-    animation: show 1s linear forwards;
+  opacity: 0;
+
+  animation: show 1s linear forwards;
 }
 
 @keyframes show {
-    0% {
-        opacity: 0;
-    }
-    50% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 .game__smallClouds,
 .game__bigClouds {
-    position: absolute;
-    top: 0;
-    width: 100%;
-    height: 100%;
+  position: absolute;
+  top: 0;
+
+  width: 100%;
+  height: 100%;
 }
 
 .game__smallClouds {
-    animation: smallClouds 20s linear infinite;
+  animation: smallClouds 20s linear infinite;
 }
 
 .game__bigClouds {
-    animation: bigClouds 60s linear infinite;
+  animation: bigClouds 60s linear infinite;
 }
 
 .game__smallClouds1 {
-    left: 0
+  left: 0;
 }
 
 .game__smallClouds2 {
-    left: -100%;
+  left: -100%;
 }
 
 .game__bigClouds1 {
-    right: -100%;
+  right: -100%;
 }
 
 .game__bigClouds2 {
-    right: 0;
+  right: 0;
 }
 
 .game__info {
-    position: absolute;
-    width: 943px;
-    height: 117px;
-    left: calc(50% - 471px);
-    top: 0;
-    background-image: url("../assets/images/game__topDesk.png");
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;
-    display: flex;
+  position: absolute;
+  top: 0;
+  left: calc(50% - 471px);
+  z-index: 10;
 
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 80px 20px 80px;
-    z-index: 10;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  width: 943px;
+  height: 117px;
+  padding: 0 80px 20px 80px;
+
+  background-image: url("../assets/images/game/topDesk.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
 }
 
 .game__info__timer {
-    width: 140px;
-    height: 55px;
-    background-image: url("../assets/images/game__timer.png");
-    background-size: 140px 55px;
-    background-position: center;
-    background-repeat: no-repeat;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    font-size: 28px;
-    padding-left: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 140px;
+  height: 55px;
+  padding-left: 30px;
+
+  font-size: 28px;
+  color: white;
+
+  background-image: url("../assets/images/game/timer.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 140px 55px;
 }
 
 .game__info__pause {
-    border-radius: 5px;
-    overflow: hidden;
+  overflow: hidden;
+
+  border-radius: 5px;
 }
 
 .game__board {
-    width: 100%;
-    display: grid;
-    align-items: center;
-    justify-content: center;
-    grid-gap: 20px;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+
+  grid-gap: 20px;
+
+  width: 100%;
 }
 
 .game-3x3 {
-    grid-template: repeat(3, 120px) / repeat(3, 120px);
-    grid-template-areas:
-        'card1 card2 card3'
-        'card4 . card5'
-        'card6 card7 card8';
+  grid-template: repeat(3, 120px) / repeat(3, 120px);
+  grid-template-areas:
+    "card1 card2 card3"
+    "card4 . card5"
+    "card6 card7 card8";
 }
 
 .game-4x4 {
-    grid-template: repeat(4, 120px) / repeat(4, 120px);
-    grid-template-areas:
-        'card1 card2 card3 card4'
-        'card5 card6 card7 card8'
-        'card9 card10 card11 card12'
-        'card13 card14 card15 card16';
+  grid-template: repeat(4, 120px) / repeat(4, 120px);
+  grid-template-areas:
+    "card1 card2 card3 card4"
+    "card5 card6 card7 card8"
+    "card9 card10 card11 card12"
+    "card13 card14 card15 card16";
 }
 
 .game-5x5 {
-    grid-template: repeat(5, 120px) / repeat(5, 120px);
-    grid-template-areas:
-        'card1 card2 card3 card4 card5'
-        'card6 card7 card8 card9 card10'
-        'card11 card12 . card13 card14'
-        'card15 card16 card17 card18 card19'
-        'card20 card21 card22 card23 card24';
+  grid-template: repeat(5, 120px) / repeat(5, 120px);
+  grid-template-areas:
+    "card1 card2 card3 card4 card5"
+    "card6 card7 card8 card9 card10"
+    "card11 card12 . card13 card14"
+    "card15 card16 card17 card18 card19"
+    "card20 card21 card22 card23 card24";
 }
 
 .game-6x6 {
-    grid-template: repeat(6, 100px) / repeat(6, 100px);
-    grid-template-areas:
-        'card1 card2 card3 card4 card5 card6'
-        'card7 card8 card9 card10 card11 card12'
-        'card13 card14 card15 card16 card17 card18'
-        'card19 card20 card21 card22 card23 card24'
-        'card25 card26 card27 card28 card29 card30'
-        'card31 card32 card33 card34 card35 card36';
+  grid-template: repeat(6, 100px) / repeat(6, 100px);
+  grid-template-areas:
+    "card1 card2 card3 card4 card5 card6"
+    "card7 card8 card9 card10 card11 card12"
+    "card13 card14 card15 card16 card17 card18"
+    "card19 card20 card21 card22 card23 card24"
+    "card25 card26 card27 card28 card29 card30"
+    "card31 card32 card33 card34 card35 card36";
 }
 
 .game__win,
 .game__lose,
 .game__pause {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 11;
-    transition: all 0.5s;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 11;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+  height: 100%;
+
+  transition: all 0.5s;
 }
 
 .game__lose__board__buttons > button,
 .game__win__board__buttons > button,
 .game__pause__board__buttons > button {
-    border-radius: 40px;
-    overflow: hidden;
-    transform: scale(0.95);
-    transition: all 0.2s;
+  overflow: hidden;
+
+  border-radius: 40px;
+
+  transform: scale(0.95);
+  transition: all 0.2s;
 }
 
 .game__lose__board__buttons > button,
@@ -176,107 +194,114 @@
 .game__win__board__buttons > button > img,
 .game__pause__board__buttons > button,
 .game__pause__board__buttons > button > img {
-    width: 140px;
-    height: 140px;
+  width: 140px;
+  height: 140px;
 }
 
 .game__win__board,
 .game__lose__board {
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    color: #333333;
+  color: #333333;
+
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% 100%;
 }
 
 .game__win__board__buttons > button,
 .game__lose__board__buttons > button {
-    border-radius: 40px;
-    overflow: hidden;
-    margin: 0 20px;
-    transform: scale(0.95);
-    transition: all 0.2s;
+  margin: 0 20px;
+  overflow: hidden;
+
+  border-radius: 40px;
+
+  transform: scale(0.95);
+  transition: all 0.2s;
 }
 
 .game__win__board__buttons > button:hover,
 .game__lose__board__buttons > button:hover {
-    transform: scale(1);
-    transition: all 0.2s;
+  transform: scale(1);
+  transition: all 0.2s;
 }
 
-@media screen and (max-width: 1024px) {
-    .game__info {
-        width: 660px;
-        height: 82px;
-        left: calc(50% - 330px);
-        padding: 0 40px 20px 40px;
-    }
+@media (max-width: 1024px) {
+  .game__info {
+    left: calc(50% - 330px);
 
-    .game__lose__board__buttons > button,
-    .game__win__board__buttons > button,
-    .game__pause__board__buttons > button {
-        border-radius: 30px;
-    }
+    width: 660px;
+    height: 82px;
+    padding: 0 40px 20px 40px;
+  }
 
-    .game__lose__board__buttons > button,
-    .game__lose__board__buttons > button > img,
-    .game__win__board__buttons > button,
-    .game__win__board__buttons > button > img,
-    .game__pause__board__buttons > button,
-    .game__pause__board__buttons > button > img {
-        width: 100px;
-        height: 100px;
-    }
+  .game__lose__board__buttons > button,
+  .game__win__board__buttons > button,
+  .game__pause__board__buttons > button {
+    border-radius: 30px;
+  }
+
+  .game__lose__board__buttons > button,
+  .game__lose__board__buttons > button > img,
+  .game__win__board__buttons > button,
+  .game__win__board__buttons > button > img,
+  .game__pause__board__buttons > button,
+  .game__pause__board__buttons > button > img {
+    width: 100px;
+    height: 100px;
+  }
 }
 
-@media screen and (max-width: 768px) {
-    .game__info {
-        width: 100%;
-        height: 82px;
-        background-size: 100% 100%;
-        left: 0;
-        padding: 0 30px 20px 30px;
-        grid-gap: 20px;
-    }
+@media (max-width: 768px) {
+  .game__info {
+    left: 0;
 
-    .game__board {
-        grid-gap: 10px;
-    }
+    grid-gap: 20px;
 
-    .game-3x3 {
-        grid-template: repeat(3, 80px) / repeat(3, 80px);
-        grid-template-areas:
-        'card1 card2 card3'
-        'card4 . card5'
-        'card6 card7 card8';
-    }
+    width: 100%;
+    height: 82px;
+    padding: 0 30px 20px 30px;
 
-    .game-4x4 {
-        grid-template: repeat(4, 80px) / repeat(4, 80px);
-        grid-template-areas:
-        'card1 card2 card3 card4'
-        'card5 card6 card7 card8'
-        'card9 card10 card11 card12'
-        'card13 card14 card15 card16';
-    }
+    background-size: 100% 100%;
+  }
 
-    .game-5x5 {
-        grid-template: repeat(5, 60px) / repeat(5, 60px);
-        grid-template-areas:
-        'card1 card2 card3 card4 card5'
-        'card6 card7 card8 card9 card10'
-        'card11 card12 . card13 card14'
-        'card15 card16 card17 card18 card19'
-        'card20 card21 card22 card23 card24';
-    }
+  .game__board {
+    grid-gap: 10px;
+  }
 
-    .game-6x6 {
-        grid-template: repeat(6, 50px) / repeat(6, 50px);
-        grid-template-areas:
-        'card1 card2 card3 card4 card5 card6'
-        'card7 card8 card9 card10 card11 card12'
-        'card13 card14 card15 card16 card17 card18'
-        'card19 card20 card21 card22 card23 card24'
-        'card25 card26 card27 card28 card29 card30'
-        'card31 card32 card33 card34 card35 card36';
-    }
+  .game-3x3 {
+    grid-template: repeat(3, 80px) / repeat(3, 80px);
+    grid-template-areas:
+      "card1 card2 card3"
+      "card4 . card5"
+      "card6 card7 card8";
+  }
+
+  .game-4x4 {
+    grid-template: repeat(4, 80px) / repeat(4, 80px);
+    grid-template-areas:
+      "card1 card2 card3 card4"
+      "card5 card6 card7 card8"
+      "card9 card10 card11 card12"
+      "card13 card14 card15 card16";
+  }
+
+  .game-5x5 {
+    grid-template: repeat(5, 60px) / repeat(5, 60px);
+    grid-template-areas:
+      "card1 card2 card3 card4 card5"
+      "card6 card7 card8 card9 card10"
+      "card11 card12 . card13 card14"
+      "card15 card16 card17 card18 card19"
+      "card20 card21 card22 card23 card24";
+  }
+
+  .game-6x6 {
+    grid-template: repeat(6, 50px) / repeat(6, 50px);
+    grid-template-areas:
+      "card1 card2 card3 card4 card5 card6"
+      "card7 card8 card9 card10 card11 card12"
+      "card13 card14 card15 card16 card17 card18"
+      "card19 card20 card21 card22 card23 card24"
+      "card25 card26 card27 card28 card29 card30"
+      "card31 card32 card33 card34 card35 card36";
+  }
 }

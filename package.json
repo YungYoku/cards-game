@@ -1,7 +1,7 @@
 {
-  "name": "tag-game",
+  "name": "cards-game",
   "private": true,
-  "version": "0.8.0",
+  "version": "0.8.1",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -9,14 +9,23 @@
     "preview": "vite preview"
   },
   "devDependencies": {
-    "@capacitor/cli": "^4.2.0",
-    "eslint": "^8.23.0",
+    "@capacitor/cli": "^4.3.0",
+    "eslint": "^8.25.0",
     "prettier": "^2.7.1",
-    "vite": "^3.1.2",
-    "vite-plugin-pwa": "^0.12.8"
+    "vite": "^3.1.8",
+    "vite-plugin-pwa": "^0.13.1",
+    "sass": "^1.55.0",
+    "stylelint": "^14.14.0",
+    "stylelint-config-prettier": "^9.0.3",
+    "stylelint-config-rational-order": "^0.1.2",
+    "stylelint-config-recess-order": "^3.0.0",
+    "stylelint-config-recommended-scss": "^7.0.0",
+    "stylelint-config-standard": "^29.0.0",
+    "stylelint-order": "^5.0.0",
+    "stylelint-prettier": "^2.0.0"
   },
   "dependencies": {
-    "@capacitor/android": "^4.2.0",
-    "@capacitor/core": "^4.2.0"
+    "@capacitor/android": "^4.3.0",
+    "@capacitor/core": "^4.3.0"
   }
 }

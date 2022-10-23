@@ -1,9 +1,8 @@
 import { SettingsStore } from "../stores/settings.store";
-
-import imageTitle from "../assets/images/settings__title.png";
-import buttonApprove from "../assets/images/settings__approve.png";
+import imageTitle from "../assets/images/settings/title.png";
+import buttonApprove from "../assets/images/settings/approve.png";
 import buttonClose from "../assets/images/close.png";
-import buttonOn from "../assets/images/settings__btnOn.png";
+import buttonOn from "../assets/images/settings/btnOn.png";
 import { Popup } from "../core/popup";
 import { MusicToggle } from "./music.toggle";
 import { SoundToggle } from "./sound.toggle";

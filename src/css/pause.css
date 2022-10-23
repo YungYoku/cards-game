@@ -1,99 +1,109 @@
 .game__pause__board {
-    width: 723px;
-    height: 60%;
-    background-image: url("../assets/images/pause__board.png");
-    background-size: 723px 100%;
-    background-repeat: no-repeat;
-    background-position: center;
-    display: grid;
-    grid-template: auto auto / 1fr;
-    padding: 10vh 0 20px 0;
-    position: relative;
+  position: relative;
+
+  display: grid;
+
+  grid-template: auto auto / 1fr;
+
+  width: 723px;
+  height: 60%;
+  padding: 10vh 0 20px 0;
+
+  background-image: url("../assets/images/pause/board.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 723px 100%;
 }
 
 .game__pause__board__close,
 .game__pause__board__close > img {
-    width: 100px;
-    height: 100px;
+  width: 100px;
+  height: 100px;
 }
 
 .game__pause__board__close {
-    position: absolute;
-    top: 3%;
-    right: 0;
-    border-radius: 50%;
-    overflow: hidden;
-    transform: scale(0.95);
-    transition: all 0.2s;
+  position: absolute;
+  top: 3%;
+  right: 0;
+
+  overflow: hidden;
+
+  border-radius: 50%;
+
+  transform: scale(0.95);
+  transition: all 0.2s;
 }
 
 .game__pause__board__close:hover {
-    transform: scale(1);
-    transition: all 0.2s;
+  transform: scale(1);
+  transition: all 0.2s;
 }
 
 .game__pause__board__title,
 .game__pause__board__buttons {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .game__pause__board__title {
-    justify-content: center;
+  justify-content: center;
 }
 
 .game__pause__board__title > h3 {
-    color: #333333;
-    font-size: 80px;
-    text-align: center;
-    padding: 0 10%;
+  padding: 0 10%;
+
+  font-size: 80px;
+  text-align: center;
+  color: #333333;
 }
 
 .game__pause__board__buttons {
-    padding: 0 25%;
-    justify-content: space-between;
+  justify-content: space-between;
+
+  padding: 0 25%;
 }
 
 .game__pause__board__buttons > button:hover {
-    transform: scale(1);
-    transition: all 0.2s;
+  transform: scale(1);
+  transition: all 0.2s;
 }
 
 @media screen and (max-width: 1024px) {
-    .game__pause__board {
-        width: 500px;
-        background-size: 500px 100%;
-        grid-template: auto auto / 1fr;
-    }
+  .game__pause__board {
+    grid-template: auto auto / 1fr;
 
-    .game__pause__board__title > h3 {
-        font-size: 60px;
-    }
+    width: 500px;
+
+    background-size: 500px 100%;
+  }
+
+  .game__pause__board__title > h3 {
+    font-size: 60px;
+  }
 }
 
 @media screen and (max-width: 600px) {
-    .game__pause__board {
-        width: 80%;
-        background-size: 100% 100%;
-    }
+  .game__pause__board {
+    width: 80%;
 
-    .game__pause__board__title > h3 {
-        font-size: 50px;
-    }
+    background-size: 100% 100%;
+  }
 
-    .game__pause__board__buttons {
-        padding: 60px 15% 0 15%;
-    }
+  .game__pause__board__title > h3 {
+    font-size: 50px;
+  }
+
+  .game__pause__board__buttons {
+    padding: 60px 15% 0 15%;
+  }
 }
-
 
 @media screen and (max-width: 400px) {
-    .game__pause__board__title > h3 {
-        font-size: 40px;
-    }
+  .game__pause__board__title > h3 {
+    font-size: 40px;
+  }
 
-    .game__pause__board__buttons {
-        padding: 60px 10% 0 10%;
-    }
+  .game__pause__board__buttons {
+    padding: 60px 10% 0 10%;
+  }
 }
-

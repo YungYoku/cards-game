@@ -1,72 +1,79 @@
 .game__win__board {
-    width: 600px;
-    background-image: url("../assets/images/win__board.png");
-    display: grid;
-    align-items: flex-start;
-    justify-items: center;
-    grid-template: 200px 120px 120px auto / 1fr;
-    padding: 8vh 0 40px 0;
-    position: relative;
+  position: relative;
+
+  display: grid;
+  align-items: flex-start;
+
+  grid-template: 200px 120px 120px auto / 1fr;
+
+  width: 600px;
+  padding: 8vh 0 40px 0;
+
+  background-image: url("../assets/images/win/board.png");
+  justify-items: center;
 }
 
 .game__win__board__stars__item {
-    width: 360px;
+  width: 360px;
 }
 
 .game__board__score__title,
 .game__board__bestScore__title {
-    color: #333333;
-    text-align: center;
+  text-align: center;
+  color: #333333;
 }
 
 .game__board__score__amount,
 .game__board__bestScore__amount {
-    color: #047d9b;
-    text-align: center;
+  text-align: center;
+  color: #047d9b;
 }
 
 .game__board__score__title,
 .game__board__bestScore__title,
 .game__board__bestScore__amount {
-    font-size: 32px;
+  font-size: 32px;
 }
 
 .game__board__score__amount {
-    font-size: 60px;
+  font-size: 60px;
 }
 
-@media screen and (max-width: 1024px) {
-    .game__win__board {
-        grid-template: 200px 120px 140px auto / 1fr;
-        padding: 8vh 0 40px 0;
-    }
+@media (max-width: 1024px) {
+  .game__win__board {
+    grid-template: 200px 120px 140px auto / 1fr;
+
+    padding: 8vh 0 40px 0;
+  }
 }
 
-@media screen and (max-width: 768px) {
-    .game__win__board {
-        grid-template: 150px 120px 120px auto / 1fr;
-        padding: 8vh 0 40px 0;
-    }
+@media (max-width: 768px) {
+  .game__win__board {
+    grid-template: 150px 120px 120px auto / 1fr;
 
-    .game__win__board__stars__item {
-        width: 280px;
-    }
+    padding: 8vh 0 40px 0;
+  }
+
+  .game__win__board__stars__item {
+    width: 280px;
+  }
 }
 
-@media screen and (max-width: 600px) {
-    .game__win__board {
-        width: 90%;
-        grid-template: 150px 80px 100px auto / 1fr;
-        padding: 8vh 0 40px 0;
-    }
+@media (max-width: 600px) {
+  .game__win__board {
+    grid-template: 150px 80px 100px auto / 1fr;
 
-    .game__board__score__title,
-    .game__board__bestScore__title,
-    .game__board__bestScore__amount {
-        font-size: 24px;
-    }
+    width: 90%;
+    padding: 8vh 0 40px 0;
+  }
 
-    .game__board__score__amount {
-        font-size: 40px;
-    }
+  .game__board__score__title,
+  .game__board__bestScore__title,
+  .game__board__bestScore__amount {
+    font-size: 24px;
+  }
+
+  .game__board__score__amount {
+    font-size: 40px;
+  }
 }

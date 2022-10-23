@@ -1,5 +1,5 @@
-import imgAvatar from "../assets/images/rating__avatar.png";
-import imgLike from "../assets/images/rating__like.png";
+import imgAvatar from "../assets/images/rating/avatar.png";
+import imgLike from "../assets/images/rating/like.png";
 
 export class RatingCardComponent {
   constructor(score) {

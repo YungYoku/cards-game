@@ -5,41 +5,47 @@
 @import "rating.css";
 
 .app {
-    width: 100%;
-    height: 100vh;
-    background-color: #6dced5;
-    position: absolute;
-    top: 100vh;
-    transition: all 1s;
+  position: absolute;
+  top: 100vh;
+
+  width: 100%;
+  height: 100vh;
+
+  background-color: #6dced5;
+
+  transition: all 1s;
 }
 
 .app > div {
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
 }
 
 .clouds {
-    background-color: #6dced5;
-    position: absolute;
-    top: -100vh;
-    left: 0;
-    transition: all 1s;
+  position: absolute;
+  top: -100vh;
+  left: 0;
+
+  background-color: #6dced5;
+
+  transition: all 1s;
 }
 
 .clouds > img {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    left: 0;
-    top: 0;
-    z-index: 2;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+
+  width: 100%;
+  height: 100%;
 }
 
 .startSmallClouds {
-    animation: smallClouds 20s linear infinite;
+  animation: smallClouds 20s linear infinite;
 }
 
 .startBigClouds {
-    animation: bigClouds 60s linear infinite;
+  animation: bigClouds 60s linear infinite;
 }

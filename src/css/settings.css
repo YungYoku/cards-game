@@ -1,224 +1,310 @@
 .settings {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: absolute;
-    left: 0;
-    top: 0;
-    z-index: 2;
-    transition: all 0.5s;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  transition: all 0.5s;
 }
 
 .settings__board {
-    position: relative;
-    margin: 70px 0 0 0;
-    padding: 140px 200px 120px 200px;
+  position: relative;
 
-    width: 80%;
-    max-height: 80%;
-    max-width: 1098px;
-    display: grid;
-    grid-template: 60px 60px auto / 1fr;
-    align-items: center;
-    justify-content: center;
+  display: grid;
+  justify-content: center;
+  align-items: center;
 
-    background-image: url("../assets/images/settings__board.png");
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
-    background-position: center;
+  grid-template: 60px 60px auto / 1fr;
 
-    color: #333333;
+  width: 80%;
+  max-width: 1098px;
+  max-height: 80%;
+  margin: 70px 0 0 0;
+  padding: 140px 200px 120px 200px;
+
+  color: #333333;
+
+  background-image: url("../assets/images/settings/board.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% 100%;
 }
 
 .settings__board__approve {
-    position: absolute;
-    top: -40px;
-    border-radius: 50%;
-    overflow: hidden;
-    z-index: 2;
-    transform: scale(0.95);
-    transition: all 0.2s;
+  position: absolute;
+  top: -40px;
+  left: -20px;
+  z-index: 2;
+
+  overflow: hidden;
+
+  border-radius: 50%;
+
+  transform: scale(0.95);
+  transition: all 0.2s;
 }
 
 .settings__board__approve:hover {
-    transform: scale(1);
-    transition: all 0.2s;
-}
-
-.settings__board__approve {
-    left: -20px;
+  transform: scale(1);
+  transition: all 0.2s;
 }
 
 .settings__board__music,
 .settings__board__sounds {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .settings__board__music > span,
 .settings__board__sounds > span {
-    font-size: 44px;
+  font-size: 44px;
 }
 
 .settings__board__button {
-    width: 30%;
-    min-width: 130px;
-    max-width: 140px;
-    height: 60px;
-    background-image: url("../assets/images/settings__btnBg.png");
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    padding: 0 10px;
-    display: grid;
-    grid-template: auto / 1fr 1fr;
-    grid-template-areas: 'title img';
-    align-items: center;
+  display: grid;
+  align-items: center;
+
+  grid-template: auto / 1fr 1fr;
+  grid-template-areas: "title img";
+
+  width: 30%;
+  min-width: 130px;
+  max-width: 140px;
+  height: 60px;
+  padding: 0 10px;
+
+  background-image: url("../assets/images/settings/btnBg.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
 }
 
 .settings__board__button__title {
-    grid-area: title;
-    color: white;
-    font-size: 28px;
-    margin: 0 10px;
+  grid-area: title;
+
+  margin: 0 10px;
+
+  font-size: 28px;
+  color: white;
 }
 
 .settings__board__button__img {
-    grid-area: img;
-    height: 40px;
+  grid-area: img;
+
+  height: 40px;
 }
 
 .toggleOff {
-    grid-template-areas: 'img title' !important;
+  grid-template-areas: "img title" !important;
 }
 
 .settings__board__difficulty > h3 {
-    text-align: center;
-    font-size: 48px;
+  font-size: 48px;
+  text-align: center;
 }
 
 .settings__board__difficulty__buttons {
-    display: grid;
-    grid-template: 100px 100px / 1fr 1fr;
-    grid-gap: 20px;
-    align-items: center;
-    justify-items: center;
-    padding: 20px 5% 0 5%;
+  display: grid;
+  align-items: center;
+
+  grid-gap: 20px;
+  grid-template: 100px 100px / 1fr 1fr;
+
+  padding: 20px 5% 0 5%;
+  justify-items: center;
 }
 
 .settings__board__difficulty__buttons > button {
-    width: 100%;
-    max-width: 200px;
-    max-height: 100px;
-    height: 100%;
-    font-size: 32px;
-    background-image: url("../assets/images/settings__difficultyBg.png");
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #333333;
-    padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+  max-width: 200px;
+  height: 100%;
+  max-height: 100px;
+  padding: 10px;
+
+  font-size: 32px;
+  color: #333333;
+
+  background-image: url("../assets/images/settings/difficultyBg.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
 }
 
 .settings__board__difficulty__buttons > button:hover {
-    background-image: url("../assets/images/settings__difficultyHoveredBg.png");
+  background-image: url("../assets/images/settings/difficultyHoveredBg.png");
 }
 
 .active-difficulty {
-    background-image: url("../assets/images/settings__difficultyHoveredBg.png") !important;
+  background-image: url("../assets/images/settings/difficultyHoveredBg.png") !important;
 }
 
-@media screen and (max-width: 1200px) {
-    .settings__board__approve {
-        top: -10px;
-        height: 70px;
-        width: 70px;
-        left: -10px;
-    }
+@media (max-width: 1200px) {
+  .settings__board__approve {
+    top: -10px;
+    left: -10px;
 
-    .settings__board__approve img {
-        height: 70px;
-        width: 70px;
-    }
+    width: 70px;
+    height: 70px;
+  }
+
+  .settings__board__approve img {
+    width: 70px;
+    height: 70px;
+  }
 }
 
-@media screen and (max-width: 1024px) {
-    .settings__board {
-        padding: 120px 120px 100px 120px;
-    }
+@media (max-width: 1024px) {
+  .settings__board {
+    padding: 120px 120px 100px 120px;
+  }
 }
 
-@media screen and (max-width: 768px) {
-    .settings__board {
-        display: grid;
-        grid-template: 60px 60px auto / 1fr;
-        padding: 100px 80px;
-    }
+@media (max-width: 768px) {
+  .settings__board {
+    display: grid;
 
-    .settings__board__music > span,
-    .settings__board__sounds > span {
-        font-size: 34px;
-    }
+    grid-template: 60px 60px auto / 1fr;
 
-    .settings__board__difficulty > h3 {
-        font-size: 34px;
-    }
+    padding: 100px 80px;
+  }
 
-    .settings__board__difficulty__buttons {
-        display: grid;
-        grid-template: 70px 70px / 1fr 1fr;
-        grid-gap: 10px;
-        align-items: center;
-        justify-items: center;
-        padding: 20px 5% 0 5%;
-    }
+  .settings__board__music > span,
+  .settings__board__sounds > span {
+    font-size: 34px;
+  }
 
-    .settings__board__difficulty__buttons > button {
-        width: 100%;
-        max-width: 200px;
-        max-height: 70px;
-        height: 100%;
-        font-size: 26px;
-    }
+  .settings__board__difficulty > h3 {
+    font-size: 34px;
+  }
+
+  .settings__board__difficulty__buttons {
+    display: grid;
+    align-items: center;
+
+    grid-gap: 10px;
+    grid-template: 70px 70px / 1fr 1fr;
+
+    padding: 20px 5% 0 5%;
+    justify-items: center;
+  }
+
+  .settings__board__difficulty__buttons > button {
+    width: 100%;
+    max-width: 200px;
+    height: 100%;
+    max-height: 70px;
+
+    font-size: 26px;
+  }
 }
 
-@media screen and (max-width: 600px) {
-    .settings__board {
-        grid-template: 45px 60px auto / 1fr;
-        padding: 110px 60px 100px 60px;
-    }
+@media (max-width: 600px) {
+  .settings__board {
+    grid-template: 45px 60px auto / 1fr;
 
-    .settings__board__music > span,
-    .settings__board__sounds > span,
-    .settings__board__difficulty > h3,
-    .settings__board__button__title {
-        font-size: 22px;
-    }
+    width: 90%;
+    padding: 110px 60px 100px 60px;
+  }
 
-    .settings__board__button__img {
-        height: 30px;
-    }
+  .settings__board__music > span,
+  .settings__board__sounds > span,
+  .settings__board__difficulty > h3,
+  .settings__board__button__title {
+    font-size: 22px;
+  }
 
-    .settings__board__button {
-        width: 30%;
-        min-width: 110px;
-        height: 40px;
-        padding: 0 10px;
-    }
+  .settings__board__button__img {
+    height: 30px;
+  }
 
-    .settings__board__approve {
-        top: 20px;
-    }
+  .settings__board__button {
+    width: 30%;
+    min-width: 110px;
+    height: 40px;
+    padding: 0 10px;
+  }
 
-    .settings__board__difficulty__buttons > button {
-        width: 100%;
-        max-width: 200px;
-        max-height: 70px;
-        height: 100%;
-        font-size: 14px;
-    }
+  .settings__board__approve {
+    top: 20px;
+  }
+
+  .settings__board__difficulty__buttons > button {
+    width: 100%;
+    max-width: 200px;
+    height: 100%;
+    max-height: 70px;
+
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .settings__board {
+    grid-template: 45px 60px auto / 1fr;
+
+    padding: 80px 60px 80px 60px;
+  }
+
+  .settings__board__difficulty__buttons {
+    grid-template: 60px 60px / 1fr 1fr;
+
+    padding: 10px 5% 0 5%;
+  }
+
+  .settings__board__difficulty__buttons > button {
+    max-height: 60px;
+  }
+}
+
+@media (min-width: 700px) and (max-height: 800px) {
+  .settings__board {
+    padding: 60px 10% 80px 10%;
+  }
+
+  .settings__board__music > span,
+  .settings__board__sounds > span,
+  .settings__board__difficulty > h3,
+  .settings__board__button__title {
+    font-size: 22px;
+  }
+
+  .settings__board__button__img {
+    height: 30px;
+  }
+
+  .settings__board__button {
+    width: 30%;
+    min-width: 110px;
+    height: 40px;
+    padding: 0 10px;
+  }
+
+  .settings__board__approve,
+  .popup__close {
+    top: 20px;
+  }
+
+  .settings__board__difficulty__buttons {
+    grid-template: 60px 60px / 1fr 1fr;
+
+    padding: 10px 5% 0 5%;
+  }
+
+  .settings__board__difficulty__buttons > button {
+    width: 100%;
+    max-width: 200px;
+    height: 100%;
+    max-height: 70px;
+
+    font-size: 14px;
+  }
 }

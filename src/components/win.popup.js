@@ -1,6 +1,6 @@
-import win1 from "../assets/images/win__1star.png";
-import win2 from "../assets/images/win__2stars.png";
-import win3 from "../assets/images/win__3stars.png";
+import win1 from "../assets/images/win/1star.png";
+import win2 from "../assets/images/win/2stars.png";
+import win3 from "../assets/images/win/3stars.png";
 import { SettingsStore } from "../stores/settings.store";
 import { Popup } from "../core/popup";
 
