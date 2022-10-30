@@ -1,6 +1,5 @@
 import { SettingsStore } from "../stores/settings.store";
 import imageTitle from "../assets/images/settings/title.png";
-import buttonApprove from "../assets/images/settings/approve.png";
 import buttonClose from "../assets/images/close.png";
 import buttonOn from "../assets/images/settings/btnOn.png";
 import { Popup } from "../core/popup";
@@ -68,57 +67,66 @@ export class SettingsPopup extends Popup {
       "beforeend",
       `
             <div class="settings__board">
-                <button class="settings__board__approve">
-                    <img
-                            data-action="approve"
-                            src="${buttonApprove}"
-                            alt="Подтвердить">
-                </button>
                 <img
                         class="popup__title"
                         src="${imageTitle}"
-                        alt="НАСТРОЙКИ">
+                        alt="НАСТРОЙКИ"
+                />
+                
                 <button class="popup__close">
                     <img
                             data-action="close"
                             src="${buttonClose}"
-                            alt="Закрыть">
+                            alt="Закрыть"
+                    />
                 </button>
     
                 <div class="settings__board__music">
                     <span>МУЗЫКА</span>
+                    
                     <button 
                             class="settings__board__button settings__music"
-                            data-action="switchMusic">
+                            data-action="switchMusic"
+                    >
                         <span
                                 class="settings__board__button__title"
-                                data-action="switchMusic">ON</span>
+                                data-action="switchMusic">
+                                ON
+                        </span>
+                        
                         <img
                                 class="settings__board__button__img"
                                 data-action="switchMusic"
                                 src="${buttonOn}"
-                                alt="Вкл">
+                                alt="Вкл"
+                        />
                     </button>
                 </div>
     
                 <div class="settings__board__sounds">
                     <span>ЗВУК</span>
+                    
                     <button
                             class="settings__board__button settings__sound"
-                            data-action="switchSound">
+                            data-action="switchSound"
+                    />
                         <span
                                 class="settings__board__button__title"
-                                data-action="switchSound">ON</span>
+                                data-action="switchSound">
+                                ON
+                        </span>
                         <img
                                 class="settings__board__button__img"
                                 data-action="switchSound"
                                 src="${buttonOn}"
-                                alt="Вкл">
+                                alt="Вкл"
+                        />
                     </button>
                 </div>
     
                 <div class="settings__board__difficulty">
                     <h3>ВЫБЕРИТЕ УРОВЕНЬ:</h3>
+                    
                     <div class="settings__board__difficulty__buttons">
                         <button data-difficulty="1">ЛЕГКИЙ</button>
                         <button data-difficulty="2">СРЕДНИЙ</button>
@@ -147,14 +155,16 @@ export class SettingsPopup extends Popup {
   }
 }
 
-function clickHandler(e) {
-  if (e.target.dataset.action) {
-    switch (e.target.dataset.action) {
+function clickHandler(event) {
+  const dataset = event.target.dataset;
+
+  if (dataset.action) {
+    switch (dataset.action) {
       case "approve":
         this.approveSettings();
         break;
       case "close":
-        this.closeSettings();
+        this.approveSettings();
         break;
       case "switchMusic":
         this.switchMusic();
@@ -164,7 +174,8 @@ function clickHandler(e) {
         break;
     }
   }
-  if (e.target.dataset.difficulty) {
-    this.setDifficulty(Number(e.target.dataset.difficulty));
+
+  if (dataset.difficulty) {
+    this.setDifficulty(Number(dataset.difficulty));
   }
 }
