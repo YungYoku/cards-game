@@ -1,7 +1,7 @@
 {
   "name": "cards-game",
   "private": true,
-  "version": "0.8.3",
+  "version": "0.8.4",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -15,8 +15,8 @@
     "@capacitor/assets": "^1.0.14",
     "eslint": "^8.26.0",
     "prettier": "^2.7.1",
-    "sass": "^1.55.0",
-    "stylelint": "^14.14.0",
+    "sass": "^1.56.0",
+    "stylelint": "^14.14.1",
     "stylelint-config-prettier": "^9.0.3",
     "stylelint-config-rational-order": "^0.1.2",
     "stylelint-config-recess-order": "^3.0.0",

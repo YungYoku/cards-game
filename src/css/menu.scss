@@ -210,3 +210,39 @@
     height: 160px;
   }
 }
+
+@media (max-height: 800px) {
+  .menu__button,
+  .menu__button > img {
+    width: 90px;
+    height: 90px;
+  }
+
+  .menu__startButton {
+    border-radius: 40px;
+  }
+
+  .menu__startButton,
+  .menu__startButton > img {
+    width: 140px;
+    height: 140px;
+  }
+}
+
+@media (max-height: 500px) {
+  .menu__button,
+  .menu__button > img {
+    width: 80px;
+    height: 80px;
+  }
+
+  .menu__startButton {
+    border-radius: 30px;
+  }
+
+  .menu__startButton,
+  .menu__startButton > img {
+    width: 100px;
+    height: 100px;
+  }
+}
