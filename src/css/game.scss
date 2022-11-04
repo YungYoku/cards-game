@@ -306,13 +306,15 @@
   }
 }
 
-@media (max-width: 800px) and (max-height: 800px) {
+@media (max-width: 800px) and (max-height: 500px) {
   .game-3x3 {
     grid-template: repeat(3, 70px) / repeat(3, 70px);
     grid-template-areas:
       "card1 card2 card3"
       "card4 . card5"
       "card6 card7 card8";
+
+    padding-top: 60px;
   }
 
   .game-4x4 {
@@ -340,6 +342,54 @@
 
   .game-6x6 {
     grid-template: repeat(6, 40px) / repeat(6, 40px);
+    grid-template-areas:
+      "card1 card2 card3 card4 card5 card6"
+      "card7 card8 card9 card10 card11 card12"
+      "card13 card14 card15 card16 card17 card18"
+      "card19 card20 card21 card22 card23 card24"
+      "card25 card26 card27 card28 card29 card30"
+      "card31 card32 card33 card34 card35 card36";
+
+    padding-top: 50px;
+  }
+}
+
+@media (max-width: 800px) and (max-height: 400px) {
+  .game-3x3 {
+    grid-template: repeat(3, 60px) / repeat(3, 60px);
+    grid-template-areas:
+      "card1 card2 card3"
+      "card4 . card5"
+      "card6 card7 card8";
+
+    padding-top: 60px;
+  }
+
+  .game-4x4 {
+    grid-template: repeat(4, 50px) / repeat(4, 50px);
+    grid-template-areas:
+      "card1 card2 card3 card4"
+      "card5 card6 card7 card8"
+      "card9 card10 card11 card12"
+      "card13 card14 card15 card16";
+
+    padding-top: 40px;
+  }
+
+  .game-5x5 {
+    grid-template: repeat(5, 40px) / repeat(5, 40px);
+    grid-template-areas:
+      "card1 card2 card3 card4 card5"
+      "card6 card7 card8 card9 card10"
+      "card11 card12 . card13 card14"
+      "card15 card16 card17 card18 card19"
+      "card20 card21 card22 card23 card24";
+
+    padding-top: 40px;
+  }
+
+  .game-6x6 {
+    grid-template: repeat(6, 30px) / repeat(6, 30px);
     grid-template-areas:
       "card1 card2 card3 card4 card5 card6"
       "card7 card8 card9 card10 card11 card12"
