@@ -29,8 +29,12 @@ export class PausePopup extends Popup {
     leave() {
     }
 
-    closeVideo() {
+    showVideo() {
         this.video.classList.add("hide");
+    }
+
+    closeVideo() {
+        this.video.classList.remove("hide");
     }
 }
 
