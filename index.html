@@ -65,13 +65,22 @@
         </div>
         <div class="game__board showAnimation"></div>
         <div class="game__pause hide hide-popup">
-            <div id="yandex_rtb_R-A-1981741-1"></div>
-            <script>window.yaContextCb.push(() => {
-                Ya.Context.AdvManager.render({
-                    renderTo: 'yandex_rtb_R-A-1981741-1',
-                    blockId: 'R-A-1981741-1'
-                })
-            })</script>
+            <div class="pause_video hide">
+                <div id="yandex_rtb_R-A-1981741-1"></div>
+                <script>window.yaContextCb.push(() => {
+                    Ya.Context.AdvManager.render({
+                        renderTo: 'yandex_rtb_R-A-1981741-1',
+                        blockId: 'R-A-1981741-1'
+                    })
+                })</script>
+
+                <div
+                        class="close"
+                        data-action="closeVideo"
+                >
+                    Закрыть
+                </div>
+            </div>
 
             <div class="game__pause__board">
                 <img

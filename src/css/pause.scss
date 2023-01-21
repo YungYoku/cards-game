@@ -1,3 +1,21 @@
+.game__pause {
+  position: relative;
+
+  &.hide {
+    display: none;
+  }
+
+  .pause_video {
+  }
+
+  .close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 5;
+  }
+}
+
 .game__pause__board {
   position: relative;
 
