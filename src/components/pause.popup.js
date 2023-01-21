@@ -33,6 +33,10 @@ export class PausePopup extends Popup {
         this.video.classList.remove("hide");
     }
 
+    hideVideo() {
+        this.video.classList.add("hide");
+    }
+
     closeVideo() {
         this.video.classList.add("hide");
     }

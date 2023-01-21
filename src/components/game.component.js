@@ -66,9 +66,12 @@ export class GameComponent extends Component {
         };
         this.pause.restart = () => {
             this.pause.showVideo();
+        };
+        this.pause.closeVideo = () => {
+            this.pause.hideVideo();
             this.startGame();
             this.unpauseGame();
-        };
+        }
         this.pause.leave = () => {
             this.beforeHideGame();
             this.pause.hide();
