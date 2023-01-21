@@ -90,9 +90,12 @@ export class GameComponent extends Component {
             this.leave();
         };
         this.win.restart = () => {
+            this.win.showVideo();
+        };
+        this.win.closeVideo = () => {
             this.win.hide();
             this.restart();
-        };
+        }
 
         this.lose.leave = () => {
             this.lose.hide();

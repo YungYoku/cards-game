@@ -1,3 +1,11 @@
+.game__win {
+  position: relative;
+
+  &.hide {
+    display: none;
+  }
+}
+
 .game__win__board {
   position: relative;
 

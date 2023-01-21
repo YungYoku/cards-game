@@ -4,7 +4,7 @@ export class PausePopup extends Popup {
     constructor(className, options) {
         super(className);
 
-        this.video = this.$el.querySelector(".pause_video");
+        this.video = this.$el.querySelector(".start_video");
         this.music = options.music;
     }
 
