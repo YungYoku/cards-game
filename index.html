@@ -8,6 +8,8 @@
     <meta content="#ffffff" name="theme-color"/>
     <title>Cards game</title>
     <meta content="Cards game - игра для развития памяти." name="description">
+    <script>window.yaContextCb = window.yaContextCb || []</script>
+    <script async src="https://yandex.ru/ads/system/context.js"></script>
 </head>
 <body>
 <div class="app">
@@ -63,6 +65,14 @@
         </div>
         <div class="game__board showAnimation"></div>
         <div class="game__pause hide hide-popup">
+            <div id="yandex_rtb_R-A-1981741-1"></div>
+            <script>window.yaContextCb.push(() => {
+                Ya.Context.AdvManager.render({
+                    renderTo: 'yandex_rtb_R-A-1981741-1',
+                    blockId: 'R-A-1981741-1'
+                })
+            })</script>
+
             <div class="game__pause__board">
                 <img
                         alt="ПАУЗА"
