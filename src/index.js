@@ -1,6 +1,10 @@
 import "./css/style.scss";
-import { AppComponent } from "./components/app.component";
+import {AppComponent} from "./components/app.component";
 
-window.screen.orientation.lock("portrait");
+try {
+    window.screen.orientation.lock("portrait");
+} catch (error) {
+    console.log(error);
+}
 
 new AppComponent("app");
