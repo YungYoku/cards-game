@@ -230,7 +230,7 @@
   transition: all 0.2s;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1024px), (max-height: 920px) {
   .game__info {
     left: calc(50% - 330px);
 
