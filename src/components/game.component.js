@@ -61,6 +61,7 @@ export class GameComponent extends Component {
         this.lose = new LosePopup("game__lose");
         this.timer = new TimerComponent("game__info__timer__time", this.lose);
 
+        this.pauseVideoTimerShowing = false;
         this.pause.close = () => {
             this.pause.hide();
             this.timer.unpauseTimer();
@@ -68,18 +69,20 @@ export class GameComponent extends Component {
         this.pause.restart = () => {
             this.pause.showVideo();
 
-            const videoLength = 9000;
-            this.pause.animateVideoCloseButton(videoLength);
-            setTimeout(() => {
-                this.pause.closeVideo = () => {
-                    this.pause.hideVideo();
-                    this.pause.hideVideoCloseImg();
-                    this.startGame();
-                    this.unpauseGame();
-                }
-            }, videoLength);
+            this.pause.animateVideoCloseButton(9)
+                .then(() => {
+                    this.pauseVideoTimerShowing = true;
+                });
         };
         this.pause.closeVideo = () => {
+            if (this.pauseVideoTimerShowing) {
+                this.pauseVideoTimerShowing = false;
+
+                this.pause.hideVideo();
+                this.pause.hideVideoCloseImg();
+                this.startGame();
+                this.unpauseGame();
+            }
         }
 
         this.pause.leave = () => {
@@ -91,6 +94,7 @@ export class GameComponent extends Component {
             }, 1000);
         };
 
+        this.winVideoTimerShowing = false;
         this.win.onHide = () => {
             this.$el.querySelector(".game__board").innerHTML = "";
             this.cards = [];
@@ -102,17 +106,19 @@ export class GameComponent extends Component {
         this.win.restart = () => {
             this.win.showVideo();
 
-            const videoLength = 9000;
-            this.win.animateVideoCloseButton(videoLength);
-            setTimeout(() => {
-                this.win.closeVideo = () => {
-                    this.win.hide();
-                    this.win.hideVideoCloseImg();
-                    this.restart();
-                }
-            }, videoLength);
+            this.win.animateVideoCloseButton(9)
+                .then(() => {
+                    this.winVideoTimerShowing = true;
+                });
         };
         this.win.closeVideo = () => {
+            if (this.winVideoTimerShowing) {
+                this.winVideoTimerShowing = false;
+
+                this.win.hide();
+                this.win.hideVideoCloseImg();
+                this.restart();
+            }
         }
 
         this.lose.leave = () => {

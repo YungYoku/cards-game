@@ -34,18 +34,20 @@ export class PausePopup extends Popup {
         const text = videoCloseButton.querySelector(".text");
         const img = videoCloseButton.querySelector(".video-close_img");
 
-        let i = videoLength / 1000;
-        text.innerHTML = "" + i--;
+        text.innerHTML = "" + videoLength--;
 
-        const interval = setInterval(() => {
-            if (i >= 0) {
-                text.innerHTML = "" + i--;
-            } else {
-                text.innerHTML = "";
-                img.classList.remove("hide");
-                clearInterval(interval);
-            }
-        }, 1000);
+        return new Promise(resolve => {
+            const interval = setInterval(() => {
+                if (videoLength >= 0) {
+                    text.innerHTML = "" + videoLength--;
+                } else {
+                    text.innerHTML = "";
+                    img.classList.remove("hide");
+                    clearInterval(interval);
+                    resolve();
+                }
+            }, 1000);
+        })
     }
 
     hideVideoCloseImg() {
