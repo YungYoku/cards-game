@@ -75,6 +75,11 @@ export class WinPopup extends Popup {
         }, 1000);
     }
 
+    hideVideoCloseImg() {
+        const img = this.$el.querySelector(".video-close_img");
+        img.classList.add("hide");
+    }
+
     showVideo() {
         this.video.classList.remove("hide");
     }

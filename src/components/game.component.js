@@ -73,6 +73,7 @@ export class GameComponent extends Component {
             setTimeout(() => {
                 this.pause.closeVideo = () => {
                     this.pause.hideVideo();
+                    this.pause.hideVideoCloseImg();
                     this.startGame();
                     this.unpauseGame();
                 }
@@ -106,6 +107,7 @@ export class GameComponent extends Component {
             setTimeout(() => {
                 this.win.closeVideo = () => {
                     this.win.hide();
+                    this.win.hideVideoCloseImg();
                     this.restart();
                 }
             }, videoLength);
