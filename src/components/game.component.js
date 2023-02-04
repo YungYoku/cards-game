@@ -67,12 +67,20 @@ export class GameComponent extends Component {
         };
         this.pause.restart = () => {
             this.pause.showVideo();
+
+            const videoLength = 9000;
+            this.pause.animateVideoCloseButton(videoLength);
+            setTimeout(() => {
+                this.pause.closeVideo = () => {
+                    this.pause.hideVideo();
+                    this.startGame();
+                    this.unpauseGame();
+                }
+            }, videoLength);
         };
         this.pause.closeVideo = () => {
-            this.pause.hideVideo();
-            this.startGame();
-            this.unpauseGame();
         }
+
         this.pause.leave = () => {
             this.beforeHideGame();
             this.pause.hide();
@@ -92,10 +100,17 @@ export class GameComponent extends Component {
         };
         this.win.restart = () => {
             this.win.showVideo();
+
+            const videoLength = 9000;
+            this.win.animateVideoCloseButton(videoLength);
+            setTimeout(() => {
+                this.win.closeVideo = () => {
+                    this.win.hide();
+                    this.restart();
+                }
+            }, videoLength);
         };
         this.win.closeVideo = () => {
-            this.win.hide();
-            this.restart();
         }
 
         this.lose.leave = () => {

@@ -29,6 +29,25 @@ export class PausePopup extends Popup {
     leave() {
     }
 
+    animateVideoCloseButton(videoLength) {
+        const videoCloseButton = this.$el.querySelector(".video-close");
+        const text = videoCloseButton.querySelector(".text");
+        const img = videoCloseButton.querySelector(".video-close_img");
+
+        let i = videoLength / 1000;
+        text.innerHTML = "" + i--;
+
+        const interval = setInterval(() => {
+            if (i >= 0) {
+                text.innerHTML = "" + i--;
+            } else {
+                text.innerHTML = "";
+                img.classList.remove("hide");
+                clearInterval(interval);
+            }
+        }, 1000);
+    }
+
     showVideo() {
         this.video.classList.remove("hide");
     }
