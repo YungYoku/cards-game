@@ -10,6 +10,22 @@
   height: 100%;
 
   backdrop-filter: blur(20px);
+
+  .yandex-video-pc {
+    @media (max-width: 1024px) {
+      display: none;
+    }
+  }
+
+  .yandex-video-laptop {
+    @media (min-width: 1024px) {
+      display: none;
+    }
+
+    @media (max-width: 768px) {
+      display: none;
+    }
+  }
 }
 
 .close {
