@@ -56,6 +56,15 @@ export class PausePopup extends Popup {
     }
 
     showVideo() {
+        if (window.innerWidth < 768) {
+            window.yaContextCb.push(() => {
+                Ya.Context.AdvManager.render({
+                    type: 'fullscreen',
+                    platform: 'touch',
+                    blockId: 'R-A-1981741-6'
+                })
+            })
+        }
         this.video.classList.remove("hide");
     }
 
