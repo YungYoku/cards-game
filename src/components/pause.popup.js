@@ -64,7 +64,6 @@ export class PausePopup extends Popup {
                     blockId: 'R-A-1981741-6'
                 })
             });
-            this.closeVideo();
         } else {
             this.video.classList.remove("hide");
         }

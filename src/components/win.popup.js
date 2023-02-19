@@ -91,7 +91,6 @@ export class WinPopup extends Popup {
                     blockId: 'R-A-1981741-5'
                 })
             })
-            this.closeVideo();
         } else {
             this.video.classList.remove("hide");
         }

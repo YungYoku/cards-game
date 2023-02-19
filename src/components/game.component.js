@@ -69,13 +69,17 @@ export class GameComponent extends Component {
         this.pause.restart = () => {
             this.pause.showVideo();
 
-            this.pause.animateVideoCloseButton(9)
-                .then(() => {
-                    this.pauseVideoTimerShowing = true;
-                });
+            if (window.innerWidth < 768) {
+                this.pause.closeVideo();
+            } else {
+                this.pause.animateVideoCloseButton(9)
+                    .then(() => {
+                        this.pauseVideoTimerShowing = true;
+                    });
+            }
         };
         this.pause.closeVideo = () => {
-            if (this.pauseVideoTimerShowing) {
+            if (this.pauseVideoTimerShowing || window.innerWidth < 768) {
                 this.pauseVideoTimerShowing = false;
 
                 this.pause.hideVideo();
@@ -106,13 +110,17 @@ export class GameComponent extends Component {
         this.win.restart = () => {
             this.win.showVideo();
 
-            this.win.animateVideoCloseButton(9)
-                .then(() => {
-                    this.winVideoTimerShowing = true;
-                });
+            if (window.innerWidth < 768) {
+                this.win.closeVideo();
+            } else {
+                this.win.animateVideoCloseButton(9)
+                    .then(() => {
+                        this.winVideoTimerShowing = true;
+                    });
+            }
         };
         this.win.closeVideo = () => {
-            if (this.winVideoTimerShowing) {
+            if (this.winVideoTimerShowing || window.innerWidth < 768) {
                 this.winVideoTimerShowing = false;
 
                 this.win.hide();
