@@ -76,7 +76,9 @@ export class GameComponent extends Component {
                     document.removeEventListener('click', closeVideoCallBack);
                 };
 
-                document.addEventListener('click', closeVideoCallBack);
+                setTimeout(() => {
+                    document.addEventListener('click', closeVideoCallBack);
+                }, 0);
             } else {
                 this.pause.animateVideoCloseButton(9)
                     .then(() => {
@@ -119,11 +121,12 @@ export class GameComponent extends Component {
             if (window.innerWidth < 768) {
                 const closeVideoCallBack = () => {
                     this.win.closeVideo();
-
                     document.removeEventListener('click', closeVideoCallBack);
                 };
 
-                document.addEventListener('click', closeVideoCallBack);
+                setTimeout(() => {
+                    document.addEventListener('click', closeVideoCallBack);
+                }, 0);
             } else {
                 this.win.animateVideoCloseButton(9)
                     .then(() => {
