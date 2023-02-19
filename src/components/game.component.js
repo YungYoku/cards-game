@@ -70,7 +70,13 @@ export class GameComponent extends Component {
             this.pause.showVideo();
 
             if (window.innerWidth < 768) {
-                this.pause.closeVideo();
+                const closeVideoCallBack = () => {
+                    this.pause.closeVideo();
+
+                    document.removeEventListener('click', closeVideoCallBack);
+                };
+
+                document.addEventListener('click', closeVideoCallBack);
             } else {
                 this.pause.animateVideoCloseButton(9)
                     .then(() => {
@@ -111,7 +117,13 @@ export class GameComponent extends Component {
             this.win.showVideo();
 
             if (window.innerWidth < 768) {
-                this.win.closeVideo();
+                const closeVideoCallBack = () => {
+                    this.win.closeVideo();
+
+                    document.removeEventListener('click', closeVideoCallBack);
+                };
+
+                document.addEventListener('click', closeVideoCallBack);
             } else {
                 this.win.animateVideoCloseButton(9)
                     .then(() => {
