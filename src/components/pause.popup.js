@@ -13,11 +13,15 @@ export class PausePopup extends Popup {
     }
 
     onShow() {
-        this.music.control.muted = true;
+        if (localStorage.music === "true") {
+            this.music.control.muted = true;
+        }
     }
 
     onHide() {
-        this.music.control.muted = false;
+        if (localStorage.music === "true") {
+            this.music.control.muted = false;
+        }
     }
 
     close() {

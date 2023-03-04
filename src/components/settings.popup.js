@@ -1,71 +1,54 @@
-import { SettingsStore } from "../stores/settings.store";
+import {SettingsStore} from "../stores/settings.store";
 import imageTitle from "../assets/images/settings/title.png";
 import buttonClose from "../assets/images/close.png";
 import buttonOn from "../assets/images/settings/btnOn.png";
-import { Popup } from "../core/popup";
-import { MusicToggle } from "./music.toggle";
-import { SoundToggle } from "./sound.toggle";
+import {Popup} from "../core/popup";
+import {MusicToggle} from "./music.toggle";
+import {SoundToggle} from "./sound.toggle";
 
 export class SettingsPopup extends Popup {
-  constructor(className) {
-    super(className);
-  }
+    constructor(className) {
+        super(className);
+    }
 
-  onInit() {
-    this.difficulty = SettingsStore.getDifficulty();
-    this.cardsAmount = SettingsStore.getCardsAmount();
+    onInit() {
+        this.difficulty = SettingsStore.getDifficulty();
+        this.cardsAmount = SettingsStore.getCardsAmount();
 
-    this.$el.addEventListener("click", clickHandler.bind(this));
-    this.renderSettings();
+        this.$el.addEventListener("click", clickHandler.bind(this));
+        this.renderSettings();
 
-    this.music = new MusicToggle("settings__music", "music");
-    this.sound = new SoundToggle("settings__sound", "sound");
-  }
+        this.music = new MusicToggle("settings__music", "music");
+        this.sound = new SoundToggle("settings__sound", "sound");
+    }
 
-  onShow() {
-    this.setup = {
-      difficulty: localStorage.difficulty,
-      music: localStorage.music,
-      sound: localStorage.sound,
-    };
-  }
+    approveSettings() {
+        this.hide();
+    }
 
-  approveSettings() {
-    this.hide();
-  }
+    switchMusic() {
+        this.music.toggle();
+    }
 
-  closeSettings() {
-    this.setDifficulty(Number(this.setup.difficulty));
-    if (this.setup.music === "true") this.music.turnOn();
-    else this.music.turnOff();
-    if (this.setup.sound === "true") this.sound.turnOn();
-    else this.sound.turnOff();
-    this.hide();
-  }
+    switchSound() {
+        this.sound.toggle();
+    }
 
-  switchMusic() {
-    this.music.toggle();
-  }
+    setDifficulty(difficulty) {
+        this.$el
+            .querySelector(".settings__board__difficulty__buttons")
+            .querySelectorAll("button")
+            .forEach((el) => el.classList.remove("active-difficulty"));
+        this.difficulty = difficulty;
+        SettingsStore.setDifficulty(difficulty);
+        this.setActiveButton();
+    }
 
-  switchSound() {
-    this.sound.toggle();
-  }
-
-  setDifficulty(difficulty) {
-    this.$el
-      .querySelector(".settings__board__difficulty__buttons")
-      .querySelectorAll("button")
-      .forEach((el) => el.classList.remove("active-difficulty"));
-    this.difficulty = difficulty;
-    SettingsStore.setDifficulty(difficulty);
-    this.setActiveButton();
-  }
-
-  renderSettings() {
-    this.$el.innerHTML = "";
-    this.$el.insertAdjacentHTML(
-      "beforeend",
-      `
+    renderSettings() {
+        this.$el.innerHTML = "";
+        this.$el.insertAdjacentHTML(
+            "beforeend",
+            `
             <div class="settings__board">
                 <img
                         class="popup__title"
@@ -136,46 +119,46 @@ export class SettingsPopup extends Popup {
                 </div>
             </div>
         `
-    );
+        );
 
-    this.setActiveButton();
-  }
+        this.setActiveButton();
+    }
 
-  setActiveButton() {
-    const array = [];
+    setActiveButton() {
+        const array = [];
 
-    this.$el
-      .querySelector(".settings__board__difficulty__buttons")
-      .querySelectorAll("button")
-      .forEach((el) => array.push(el));
+        this.$el
+            .querySelector(".settings__board__difficulty__buttons")
+            .querySelectorAll("button")
+            .forEach((el) => array.push(el));
 
-    array
-      .find((el) => el.dataset.difficulty === String(this.difficulty))
-      .classList.add("active-difficulty");
-  }
+        array
+            .find((el) => el.dataset.difficulty === String(this.difficulty))
+            .classList.add("active-difficulty");
+    }
 }
 
 function clickHandler(event) {
-  const dataset = event.target.dataset;
+    const dataset = event.target.dataset;
 
-  if (dataset.action) {
-    switch (dataset.action) {
-      case "approve":
-        this.approveSettings();
-        break;
-      case "close":
-        this.approveSettings();
-        break;
-      case "switchMusic":
-        this.switchMusic();
-        break;
-      case "switchSound":
-        this.switchSound();
-        break;
+    if (dataset.action) {
+        switch (dataset.action) {
+            case "approve":
+                this.approveSettings();
+                break;
+            case "close":
+                this.approveSettings();
+                break;
+            case "switchMusic":
+                this.switchMusic();
+                break;
+            case "switchSound":
+                this.switchSound();
+                break;
+        }
     }
-  }
 
-  if (dataset.difficulty) {
-    this.setDifficulty(Number(dataset.difficulty));
-  }
+    if (dataset.difficulty) {
+        this.setDifficulty(Number(dataset.difficulty));
+    }
 }

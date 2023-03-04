@@ -1,7 +1,7 @@
 {
   "name": "cards-game",
   "private": true,
-  "version": "0.8.5",
+  "version": "0.8.6",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -11,10 +11,10 @@
   },
   "devDependencies": {
     "@capacitor/assets": "^2.0.4",
-    "@capacitor/cli": "^4.6.3",
-    "@capacitor/core": "^4.6.3",
-    "@capacitor/android": "^4.6.3",
-    "eslint": "^8.34.0",
+    "@capacitor/cli": "^4.7.0",
+    "@capacitor/core": "^4.7.0",
+    "@capacitor/android": "^4.7.0",
+    "eslint": "^8.35.0",
     "prettier": "^2.8.4",
     "sass": "^1.58.3",
     "stylelint": "^14.16.1",
@@ -25,13 +25,13 @@
     "stylelint-config-standard": "^29.0.0",
     "stylelint-order": "^6.0.2",
     "stylelint-prettier": "^2.0.0",
-    "vite": "^4.1.2",
+    "vite": "^4.1.4",
     "vite-plugin-pwa": "^0.14.4"
   },
   "dependencies": {
-    "@capacitor/splash-screen": "^4.1.4",
+    "@capacitor/splash-screen": "^4.2.0",
     "@capacitor/status-bar": "^4.1.1",
-    "cordova-plugin-screen-orientation": "^3.0.2",
+    "cordova-plugin-screen-orientation": "^3.0.3",
     "es6-promise-plugin": "^4.2.2"
   }
 }
