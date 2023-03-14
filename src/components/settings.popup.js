@@ -51,16 +51,18 @@ export class SettingsPopup extends Popup {
             `
             <div class="settings__board">
                 <img
-                        class="popup__title"
-                        src="${imageTitle}"
-                        alt="НАСТРОЙКИ"
+                    class="popup__title"
+                    src="${imageTitle}"
+                    alt="НАСТРОЙКИ"
                 />
                 
-                <button class="popup__close">
+                <button 
+                    data-action="close"
+                    class="popup__close"
+                >
                     <img
-                            data-action="close"
-                            src="${buttonClose}"
-                            alt="Закрыть"
+                        src="${buttonClose}"
+                        alt="Закрыть"
                     />
                 </button>
     
@@ -68,20 +70,21 @@ export class SettingsPopup extends Popup {
                     <span>МУЗЫКА</span>
                     
                     <button 
-                            class="settings__board__button settings__music"
-                            data-action="switchMusic"
+                        class="settings__board__button settings__music"
+                        data-action="switchMusic"
                     >
                         <span
-                                class="settings__board__button__title"
-                                data-action="switchMusic">
-                                ON
+                            class="settings__board__button__title"
+                            data-action="switchMusic"
+                        >
+                            ON
                         </span>
                         
                         <img
-                                class="settings__board__button__img"
-                                data-action="switchMusic"
-                                src="${buttonOn}"
-                                alt="Вкл"
+                            class="settings__board__button__img"
+                            data-action="switchMusic"
+                            src="${buttonOn}"
+                            alt="Вкл"
                         />
                     </button>
                 </div>
@@ -90,19 +93,20 @@ export class SettingsPopup extends Popup {
                     <span>ЗВУК</span>
                     
                     <button
-                            class="settings__board__button settings__sound"
-                            data-action="switchSound"
+                        class="settings__board__button settings__sound"
+                        data-action="switchSound"
                     />
                         <span
-                                class="settings__board__button__title"
-                                data-action="switchSound">
-                                ON
+                            class="settings__board__button__title"
+                            data-action="switchSound">
+                            ON
                         </span>
+                        
                         <img
-                                class="settings__board__button__img"
-                                data-action="switchSound"
-                                src="${buttonOn}"
-                                alt="Вкл"
+                            class="settings__board__button__img"
+                            data-action="switchSound"
+                            src="${buttonOn}"
+                            alt="Вкл"
                         />
                     </button>
                 </div>

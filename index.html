@@ -55,12 +55,15 @@
             <div class="game__info__timer">
                 <h4 class="game__info__timer__time"></h4>
             </div>
+
             <button
-                    class="game__info__pause">
+                    class="game__info__pause"
+                    data-action="pause"
+            >
                 <img
                         alt="Пауза"
-                        data-action="pause"
-                        src="src/assets/images/game/pause.png">
+                        src="src/assets/images/game/pause.png"
+                >
             </button>
         </div>
         <div class="game__board showAnimation"></div>
@@ -101,10 +104,12 @@
                         alt="ПАУЗА"
                         class="popup__title"
                         src="src/assets/images/pause/title.png">
-                <button class="popup__close">
+                <button
+                        class="popup__close"
+                        data-action="close"
+                >
                     <img
                             alt="Закрыть"
-                            data-action="close"
                             src="src/assets/images/close.png">
                 </button>
                 <div class="game__pause__board__title">
@@ -112,18 +117,20 @@
                 </div>
                 <div class="game__pause__board__buttons">
                     <button
-                            class="game__pause__board__buttons__resume">
+                            class="game__pause__board__buttons__resume"
+                            data-action="restart"
+                    >
                         <img
                                 alt="Рестарт"
-                                data-action="restart"
                                 src="src/assets/images/resume.png">
                     </button>
 
                     <button
-                            class="game__pause__board__buttons__menu">
+                            class="game__pause__board__buttons__menu"
+                            data-action="leave"
+                    >
                         <img
                                 alt="Меню"
-                                data-action="leave"
                                 src="src/assets/images/to-menu.png">
                     </button>
                 </div>
@@ -181,16 +188,18 @@
                     <h3 class="game__board__bestScore__amount"></h3>
                 </div>
                 <div class="game__win__board__buttons">
-                    <button>
+                    <button
+                            data-action="restart"
+                    >
                         <img
                                 alt="Заново"
-                                data-action="restart"
                                 src="src/assets/images/resume.png">
                     </button>
-                    <button>
+                    <button
+                            data-action="leave"
+                    >
                         <img
                                 alt="В меню"
-                                data-action="leave"
                                 src="src/assets/images/to-menu.png">
                     </button>
                 </div>
@@ -207,16 +216,18 @@
                         class="game__lose__board__stars"
                         src="src/assets/images/lose/stars.png">
                 <div class="game__lose__board__buttons">
-                    <button>
+                    <button
+                            data-action="restart"
+                    >
                         <img
                                 alt="Заново"
-                                data-action="restart"
                                 src="src/assets/images/resume.png">
                     </button>
-                    <button>
+                    <button
+                            data-action="leave"
+                    >
                         <img
                                 alt="В меню"
-                                data-action="leave"
                                 src="src/assets/images/to-menu.png">
                     </button>
                 </div>

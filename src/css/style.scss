@@ -15,3 +15,7 @@ body {
 .hide-popup {
   transform: translateY(-100vh);
 }
+
+img {
+  pointer-events: none;
+}
