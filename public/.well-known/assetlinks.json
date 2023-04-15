@@ -1,0 +1,14 @@
+[
+  {
+    "relation": [
+      "delegate_permission/common.handle_all_urls"
+    ],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "cards_game.ru",
+      "sha256_cert_fingerprints": [
+        "7A:5F:F5:05:02:D3:4B:CE:19:77:52:61:AE:B2:CA:45:3B:81:D9:F7:C5:53:BB:40:2B:0F:42:EE:31:31:A3:97"
+      ]
+    }
+  }
+]
