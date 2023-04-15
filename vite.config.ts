@@ -23,6 +23,11 @@ export default defineConfig({
             manifest: {
                 name: "cards-game",
                 short_name: "cards-game",
+                start_url: "/",
+                display: "fullscreen",
+                background_color: "#ffffff",
+                lang: "ru",
+                scope: "/",
                 description: "cards-game",
                 theme_color: "#ffffff",
                 icons: [
@@ -35,12 +40,13 @@ export default defineConfig({
                         src: "pwa-512x512.png",
                         sizes: "512x512",
                         type: "image/png",
+                        purpose: "any"
                     },
                     {
                         src: "pwa-512x512.png",
                         sizes: "512x512",
                         type: "image/png",
-                        purpose: "any maskable",
+                        purpose: "maskable",
                     },
                 ],
             },
