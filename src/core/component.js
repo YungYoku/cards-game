@@ -1,8 +1,8 @@
 export class Component {
     constructor(className) {
-        this.$el = document.querySelector('.' + className)
-        
-        this.onInit()
+        this.$el = document.querySelector("." + className);
+
+        this.onInit();
     }
 
     onInit() {
@@ -15,12 +15,12 @@ export class Component {
     }
 
     show() {
-        this.$el.classList.remove('hide')
-        this.onShow()
+        this.$el.classList.remove("hide");
+        this.onShow();
     }
 
     hide() {
-        this.$el.classList.add('hide')
-        this.onHide()
+        this.$el.classList.add("hide");
+        this.onHide();
     }
 }

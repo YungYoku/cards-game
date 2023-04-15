@@ -1,8 +1,8 @@
 import win1 from "../assets/images/win/1star.png";
 import win2 from "../assets/images/win/2stars.png";
 import win3 from "../assets/images/win/3stars.png";
-import {SettingsStore} from "../stores/settings.store";
-import {Popup} from "../core/popup";
+import { SettingsStore } from "../stores/settings.store";
+import { Popup } from "../core/popup";
 
 export class WinPopup extends Popup {
     constructor(className) {
@@ -74,7 +74,7 @@ export class WinPopup extends Popup {
                     resolve();
                 }
             }, 1000);
-        })
+        });
     }
 
     hideVideoCloseImg() {
@@ -85,12 +85,12 @@ export class WinPopup extends Popup {
     showVideo() {
         if (window.innerWidth < 768) {
             window.yaContextCb.push(() => {
-                Ya.Context.AdvManager.render({
-                    type: 'fullscreen',
-                    platform: 'touch',
-                    blockId: 'R-A-1981741-5'
-                })
-            })
+                window.Ya.Context.AdvManager.render({
+                    type: "fullscreen",
+                    platform: "touch",
+                    blockId: "R-A-1981741-5"
+                });
+            });
         } else {
             this.video.classList.remove("hide");
         }

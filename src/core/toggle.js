@@ -11,7 +11,7 @@ export class Toggle {
     }
 
     onInit() {
-        document.addEventListener("click", this.firstTurnOn.bind(this), {once: true});
+        document.addEventListener("click", this.firstTurnOn.bind(this), { once: true });
     }
 
     firstTurnOn() {

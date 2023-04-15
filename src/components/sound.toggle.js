@@ -1,4 +1,4 @@
-import {Toggle} from "../core/toggle";
+import { Toggle } from "../core/toggle";
 
 export class SoundToggle extends Toggle {
     constructor(className, type) {

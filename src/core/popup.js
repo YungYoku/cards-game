@@ -1,8 +1,8 @@
 export class Popup {
     constructor(className) {
-        this.$el = document.querySelector('.' + className)
+        this.$el = document.querySelector("." + className);
 
-        this.onInit()
+        this.onInit();
     }
 
     onInit() {
@@ -15,18 +15,18 @@ export class Popup {
     }
 
     show() {
-        this.$el.classList.remove('hide')
+        this.$el.classList.remove("hide");
         setTimeout(() => {
-            this.$el.classList.remove('hide-popup')
-        }, 100)
-        this.onShow()
+            this.$el.classList.remove("hide-popup");
+        }, 100);
+        this.onShow();
     }
 
     hide() {
-        this.$el.classList.add('hide-popup')
+        this.$el.classList.add("hide-popup");
         setTimeout(() => {
-            this.$el.classList.add('hide')
-        }, 500)
-        this.onHide()
+            this.$el.classList.add("hide");
+        }, 500);
+        this.onHide();
     }
 }

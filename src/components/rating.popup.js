@@ -1,6 +1,6 @@
-import {RatingCardComponent} from "./rating-card.component";
+import { RatingCardComponent } from "./rating-card.component";
 import buttonClose from "../assets/images/close.png";
-import {Popup} from "../core/popup";
+import { Popup } from "../core/popup";
 import imageTitle from "../assets/images/rating/title.png";
 
 export class RatingPopup extends Popup {

@@ -1,10 +1,10 @@
-import {SettingsStore} from "../stores/settings.store";
+import { SettingsStore } from "../stores/settings.store";
 import imageTitle from "../assets/images/settings/title.png";
 import buttonClose from "../assets/images/close.png";
 import buttonOn from "../assets/images/settings/btnOn.png";
-import {Popup} from "../core/popup";
-import {MusicToggle} from "./music.toggle";
-import {SoundToggle} from "./sound.toggle";
+import { Popup } from "../core/popup";
+import { MusicToggle } from "./music.toggle";
+import { SoundToggle } from "./sound.toggle";
 
 export class SettingsPopup extends Popup {
     constructor(className) {

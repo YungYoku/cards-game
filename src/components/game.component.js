@@ -1,6 +1,6 @@
-import {Component} from "../core/component";
-import {SettingsStore} from "../stores/settings.store";
-import {CardComponent} from "./card.component";
+import { Component } from "../core/component";
+import { SettingsStore } from "../stores/settings.store";
+import { CardComponent } from "./card.component";
 import card1 from "../assets/images/game/cards/1.png";
 import card2 from "../assets/images/game/cards/2.png";
 import card3 from "../assets/images/game/cards/3.png";
@@ -19,10 +19,10 @@ import card15 from "../assets/images/game/cards/15.png";
 import card16 from "../assets/images/game/cards/16.png";
 import card17 from "../assets/images/game/cards/17.png";
 import card18 from "../assets/images/game/cards/18.png";
-import {TimerComponent} from "./timer.component";
-import {PausePopup} from "./pause.popup";
-import {WinPopup} from "./win.popup";
-import {LosePopup} from "./lose.popup";
+import { TimerComponent } from "./timer.component";
+import { PausePopup } from "./pause.popup";
+import { WinPopup } from "./win.popup";
+import { LosePopup } from "./lose.popup";
 
 export class GameComponent extends Component {
     constructor(className, options) {
@@ -56,7 +56,7 @@ export class GameComponent extends Component {
         this.isAnimationGoing = false;
         this.animationTime = 500;
 
-        this.pause = new PausePopup("game__pause", {music: options.music});
+        this.pause = new PausePopup("game__pause", { music: options.music });
         this.win = new WinPopup("game__win");
         this.lose = new LosePopup("game__lose");
         this.timer = new TimerComponent("game__info__timer__time", this.lose);
@@ -69,15 +69,16 @@ export class GameComponent extends Component {
         this.pause.restart = () => {
             this.pause.showVideo();
 
+            
             if (window.innerWidth < 768) {
                 const closeVideoCallBack = () => {
                     this.pause.closeVideo();
 
-                    document.removeEventListener('click', closeVideoCallBack);
+                    document.removeEventListener("click", closeVideoCallBack);
                 };
 
                 setTimeout(() => {
-                    document.addEventListener('click', closeVideoCallBack);
+                    document.addEventListener("click", closeVideoCallBack);
                 }, 0);
             } else {
                 this.pause.animateVideoCloseButton(9)
@@ -95,7 +96,7 @@ export class GameComponent extends Component {
                 this.startGame();
                 this.unpauseGame();
             }
-        }
+        };
 
         this.pause.leave = () => {
             this.beforeHideGame();
@@ -121,11 +122,11 @@ export class GameComponent extends Component {
             if (window.innerWidth < 768) {
                 const closeVideoCallBack = () => {
                     this.win.closeVideo();
-                    document.removeEventListener('click', closeVideoCallBack);
+                    document.removeEventListener("click", closeVideoCallBack);
                 };
 
                 setTimeout(() => {
-                    document.addEventListener('click', closeVideoCallBack);
+                    document.addEventListener("click", closeVideoCallBack);
                 }, 0);
             } else {
                 this.win.animateVideoCloseButton(9)
@@ -142,7 +143,7 @@ export class GameComponent extends Component {
                 this.win.hideVideoCloseImg();
                 this.restart();
             }
-        }
+        };
 
         this.lose.leave = () => {
             this.lose.hide();

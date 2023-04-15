@@ -1,4 +1,4 @@
-import {Popup} from "../core/popup";
+import { Popup } from "../core/popup";
 
 export class PausePopup extends Popup {
     constructor(className, options) {
@@ -51,8 +51,9 @@ export class PausePopup extends Popup {
                     resolve();
                 }
             }, 1000);
-        })
+        });
     }
+
 
     hideVideoCloseImg() {
         const img = this.$el.querySelector(".video-close_img");
@@ -62,11 +63,11 @@ export class PausePopup extends Popup {
     showVideo() {
         if (window.innerWidth < 768) {
             window.yaContextCb.push(() => {
-                Ya.Context.AdvManager.render({
-                    type: 'fullscreen',
-                    platform: 'touch',
-                    blockId: 'R-A-1981741-6'
-                })
+                window.Ya.Context.AdvManager.render({
+                    type: "fullscreen",
+                    platform: "touch",
+                    blockId: "R-A-1981741-6"
+                });
             });
         } else {
             this.video.classList.remove("hide");

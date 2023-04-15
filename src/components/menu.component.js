@@ -1,4 +1,4 @@
-import {Component} from "../core/component";
+import { Component } from "../core/component";
 import imgRating from "../assets/images/menu/rating.png";
 import imgSettings from "../assets/images/menu/settings.png";
 import imgTitle from "../assets/images/menu/title.png";
