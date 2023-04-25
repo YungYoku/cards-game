@@ -3,7 +3,7 @@ export class EarnBlock {
         this.className = className;
         this.blockId = blockId;
 
-        this.onInit();
+        // this.onInit();
     }
 
     onInit() {
