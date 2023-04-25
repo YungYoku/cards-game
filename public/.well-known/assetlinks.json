@@ -5,7 +5,7 @@
     ],
     "target": {
       "namespace": "android_app",
-      "package_name": "cards_game.ru",
+      "package_name": "cards_pairs.ru",
       "sha256_cert_fingerprints": [
         "BF:EE:5B:7D:62:68:83:A4:87:DB:46:5C:04:01:82:40:3C:55:8B:7E:71:63:FA:1E:C4:87:A9:E0:4F:19:21:0E"
       ]
