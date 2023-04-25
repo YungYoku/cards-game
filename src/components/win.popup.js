@@ -3,6 +3,7 @@ import win2 from "../assets/images/win/2stars.png";
 import win3 from "../assets/images/win/3stars.png";
 import { SettingsStore } from "../stores/settings.store";
 import { Popup } from "../core/popup";
+import { EarnBlock } from "@/core/earnBlock.js";
 
 export class WinPopup extends Popup {
     constructor(className) {
@@ -14,6 +15,9 @@ export class WinPopup extends Popup {
 
     onInit() {
         this.$el.addEventListener("click", clickHandler.bind(this));
+
+        new EarnBlock("game-win_yandex-video-pc", "R-A-1981741-2");
+        new EarnBlock("game-win_yandex-video-laptop", "R-A-1981741-4");
     }
 
     onWin(stars) {

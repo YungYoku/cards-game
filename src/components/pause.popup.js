@@ -1,4 +1,5 @@
 import { Popup } from "../core/popup";
+import { EarnBlock } from "@/core/earnBlock.js";
 
 export class PausePopup extends Popup {
     constructor(className, options) {
@@ -10,6 +11,9 @@ export class PausePopup extends Popup {
 
     onInit() {
         this.$el.addEventListener("click", clickHandler.bind(this));
+
+        new EarnBlock("game-pause_yandex-video-pc", "R-A-1981741-1");
+        new EarnBlock("game-pause_yandex-video-laptop", "R-A-1981741-3");
     }
 
     onShow() {
