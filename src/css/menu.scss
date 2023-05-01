@@ -11,238 +11,238 @@
   grid-template: 15% 50% 35% / 1fr;
 
   padding: 20px;
-}
 
-.menu button {
-  transform: scale(0.95);
-  transition: all 0.2s;
-}
-
-.menu button:hover {
-  transform: scale(1);
-  transition: all 0.2s;
-}
-
-.menu > header,
-.menu > div {
-  position: relative;
-  z-index: 3;
-}
-
-.menu > header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.menu > div {
-  position: relative;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  width: 100%;
-  height: 100%;
-}
-
-.menu__button {
-  overflow: hidden;
-
-  border-radius: 40px 40px 40px 40px;
-}
-
-.menu__button,
-.menu__button > img {
-  width: 120px;
-  height: 120px;
-}
-
-.menu__title {
-  max-width: 90%;
-  max-height: 90%;
-
-  animation: title 1s infinite linear alternate;
-}
-
-.menu__startButton {
-  overflow: hidden;
-
-  border-radius: 75px 85px 75px 85px;
-}
-
-.menu__startButton,
-.menu__startButton > img {
-  width: 230px;
-  height: 230px;
-}
-
-.menu__bigClouds,
-.menu__smallClouds,
-.menu__island {
-  position: absolute;
-}
-
-.menu__bigClouds,
-.menu__smallClouds {
-  top: 20px;
-  z-index: 1;
-
-  width: 100%;
-  height: 60%;
-}
-
-.menu__bigClouds {
-  animation: 60s bigClouds infinite linear;
-}
-
-.menu__bigClouds1 {
-  position: absolute;
-  right: 0;
-}
-
-.menu__bigClouds2 {
-  position: absolute;
-  right: -100%;
-}
-
-.menu__smallClouds {
-  animation: 20s smallClouds infinite linear;
-}
-
-.menu__smallClouds1 {
-  position: absolute;
-  left: 0;
-}
-
-.menu__smallClouds2 {
-  position: absolute;
-  left: -100%;
-}
-
-.menu__island {
-  bottom: 0;
-  left: calc(50% - 810px);
-  z-index: 2;
-
-  height: 80%;
-}
-
-.menu__startAnimation {
-  animation: start 4s linear;
-}
-
-@keyframes start {
-  0% {
-    opacity: 0;
-  }
-  75% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-@keyframes title {
-  0% {
+  button {
     transform: scale(0.95);
-  }
-  100% {
-    transform: scale(1);
-  }
-}
+    transition: all 0.2s;
 
-@keyframes bigClouds {
-  0% {
-    transform: translateX(0);
+    &:hover {
+      transform: scale(1);
+      transition: all 0.2s;
+    }
   }
-  100% {
-    transform: translateX(-100%);
-  }
-}
 
-@keyframes smallClouds {
-  0% {
-    transform: translateX(0);
+  > header,
+  > div {
+    position: relative;
+    z-index: 3;
   }
-  100% {
-    transform: translateX(100%);
-  }
-}
 
-@media (max-width: 1200px) {
-  .menu__bigClouds,
-  .menu__smallClouds {
-    height: 40%;
+  > header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
-}
 
-@media (max-width: 768px) {
-  .menu__bigClouds,
-  .menu__smallClouds {
-    height: 30%;
+  > div {
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    height: 100%;
   }
-}
 
-@media (max-width: 600px) {
   .menu__button {
     overflow: hidden;
 
-    border-radius: 30px;
+    border-radius: 40px 40px 40px 40px;
   }
 
   .menu__button,
   .menu__button > img {
-    width: 100px;
-    height: 100px;
+    width: 120px;
+    height: 120px;
+  }
+
+  .menu__title {
+    max-width: 90%;
+    max-height: 90%;
+
+    animation: title 1s infinite linear alternate;
   }
 
   .menu__startButton {
     overflow: hidden;
 
-    border-radius: 50px;
+    border-radius: 75px 85px 75px 85px;
   }
 
   .menu__startButton,
   .menu__startButton > img {
-    width: 160px;
-    height: 160px;
-  }
-}
-
-@media (max-height: 800px) {
-  .menu__button,
-  .menu__button > img {
-    width: 90px;
-    height: 90px;
+    width: 230px;
+    height: 230px;
   }
 
-  .menu__startButton {
-    border-radius: 40px;
+  .menu__bigClouds,
+  .menu__smallClouds,
+  .menu__island {
+    position: absolute;
   }
 
-  .menu__startButton,
-  .menu__startButton > img {
-    width: 140px;
-    height: 140px;
-  }
-}
+  .menu__bigClouds,
+  .menu__smallClouds {
+    top: 20px;
+    z-index: 1;
 
-@media (max-height: 500px) {
-  .menu__button,
-  .menu__button > img {
-    width: 80px;
-    height: 80px;
+    width: 100%;
+    height: 60%;
   }
 
-  .menu__startButton {
-    border-radius: 30px;
+  .menu__bigClouds {
+    animation: 60s bigClouds infinite linear;
   }
 
-  .menu__startButton,
-  .menu__startButton > img {
-    width: 100px;
-    height: 100px;
+  .menu__bigClouds1 {
+    position: absolute;
+    right: 0;
+  }
+
+  .menu__bigClouds2 {
+    position: absolute;
+    right: -100%;
+  }
+
+  .menu__smallClouds {
+    animation: 20s smallClouds infinite linear;
+  }
+
+  .menu__smallClouds1 {
+    position: absolute;
+    left: 0;
+  }
+
+  .menu__smallClouds2 {
+    position: absolute;
+    left: -100%;
+  }
+
+  .menu__island {
+    bottom: 0;
+    left: calc(50% - 810px);
+    z-index: 2;
+
+    height: 80%;
+  }
+
+  .menu__startAnimation {
+    animation: start 4s linear;
+  }
+
+  @keyframes start {
+    0% {
+      opacity: 0;
+    }
+    75% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  @keyframes title {
+    0% {
+      transform: scale(0.95);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+
+  @keyframes bigClouds {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+
+  @keyframes smallClouds {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(100%);
+    }
+  }
+
+  @media (max-width: 1200px) {
+    .menu__bigClouds,
+    .menu__smallClouds {
+      height: 40%;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .menu__bigClouds,
+    .menu__smallClouds {
+      height: 30%;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .menu__button {
+      overflow: hidden;
+
+      border-radius: 30px;
+    }
+
+    .menu__button,
+    .menu__button > img {
+      width: 100px;
+      height: 100px;
+    }
+
+    .menu__startButton {
+      overflow: hidden;
+
+      border-radius: 50px;
+    }
+
+    .menu__startButton,
+    .menu__startButton > img {
+      width: 160px;
+      height: 160px;
+    }
+  }
+
+  @media (max-height: 800px) {
+    .menu__button,
+    .menu__button > img {
+      width: 90px;
+      height: 90px;
+    }
+
+    .menu__startButton {
+      border-radius: 40px;
+    }
+
+    .menu__startButton,
+    .menu__startButton > img {
+      width: 140px;
+      height: 140px;
+    }
+  }
+
+  @media (max-height: 500px) {
+    .menu__button,
+    .menu__button > img {
+      width: 80px;
+      height: 80px;
+    }
+
+    .menu__startButton {
+      border-radius: 30px;
+    }
+
+    .menu__startButton,
+    .menu__startButton > img {
+      width: 100px;
+      height: 100px;
+    }
   }
 }
