@@ -1,13 +1,12 @@
 {
-  "name": "cards-game",
+  "name": "cards-pairs",
   "private": true,
-  "version": "0.8.9",
+  "version": "0.8.10",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview",
-    "gen-img": "npx capacitor-assets generate --android --iconBackgroundColor '#ffffff' --iconBackgroundColorDark '#ffffff' --splashBackgroundColor '#ffffff' --splashBackgroundColorDark '#ffffff'"
+    "preview": "vite preview"
   },
   "dependencies": {
   },

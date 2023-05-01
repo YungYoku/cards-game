@@ -9,7 +9,7 @@
     "eslint:recommended"
   ],
   "rules": {
-    "strict": 0,
+    "strict": 1,
     "semi": [
       "error",
       "always"
@@ -29,6 +29,6 @@
   },
   "parserOptions": {
     "sourceType": "module",
-    "ecmaVersion": 2018
+    "ecmaVersion": "latest"
   }
 }
