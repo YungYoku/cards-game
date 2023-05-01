@@ -28,7 +28,7 @@
 
   color: #333333;
 
-  background-image: url("../assets/images/settings/board.png");
+  background-image: url("../assets/images/settings/board.webp");
   background-repeat: no-repeat;
   background-position: center;
   background-size: 100% 100%;
@@ -78,7 +78,7 @@
   height: 60px;
   padding: 0 10px;
 
-  background-image: url("../assets/images/settings/btnBg.png");
+  background-image: url("../assets/images/settings/btnBg.webp");
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
@@ -133,18 +133,18 @@
   font-size: 32px;
   color: #333333;
 
-  background-image: url("../assets/images/settings/difficultyBg.png");
+  background-image: url("../assets/images/settings/difficultyBg.webp");
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
 }
 
 .settings__board__difficulty__buttons > button:hover {
-  background-image: url("../assets/images/settings/difficultyHoveredBg.png");
+  background-image: url("../assets/images/settings/difficultyHoveredBg.webp");
 }
 
 .active-difficulty {
-  background-image: url("../assets/images/settings/difficultyHoveredBg.png") !important;
+  background-image: url("../assets/images/settings/difficultyHoveredBg.webp") !important;
 }
 
 @media (max-width: 1200px) {

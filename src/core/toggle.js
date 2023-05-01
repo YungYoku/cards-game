@@ -1,5 +1,5 @@
-import buttonOff from "../assets/images/settings/btnOff.png";
-import buttonOn from "../assets/images/settings/btnOn.png";
+import buttonOff from "../assets/images/settings/btnOff.webp";
+import buttonOn from "../assets/images/settings/btnOn.webp";
 
 export class Toggle {
     constructor(className, url, type) {

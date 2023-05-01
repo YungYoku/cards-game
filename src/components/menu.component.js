@@ -1,11 +1,11 @@
 import { Component } from "../core/component";
-import imgRating from "../assets/images/menu/rating.png";
-import imgSettings from "../assets/images/menu/settings.png";
-import imgTitle from "../assets/images/menu/title.png";
-import imgPlay from "../assets/images/menu/play.png";
-import imgIsland from "../assets/images/menu/island.png";
-import imgBigClouds from "../assets/images/menu/bigClouds.png";
-import imgSmallClouds from "../assets/images/menu/smallClouds.png";
+import imgRating from "../assets/images/menu/rating.webp";
+import imgSettings from "../assets/images/menu/settings.webp";
+import imgTitle from "../assets/images/menu/title.webp";
+import imgPlay from "../assets/images/menu/play.webp";
+import imgIsland from "../assets/images/menu/island.webp";
+import imgBigClouds from "../assets/images/menu/bigClouds.webp";
+import imgSmallClouds from "../assets/images/menu/smallClouds.webp";
 
 export class MenuComponent extends Component {
     constructor(className) {

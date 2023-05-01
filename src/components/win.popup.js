@@ -1,6 +1,6 @@
-import win1 from "../assets/images/win/1star.png";
-import win2 from "../assets/images/win/2stars.png";
-import win3 from "../assets/images/win/3stars.png";
+import win1 from "../assets/images/win/1star.webp";
+import win2 from "../assets/images/win/2stars.webp";
+import win3 from "../assets/images/win/3stars.webp";
 import { SettingsStore } from "../stores/settings.store";
 import { Popup } from "../core/popup";
 import { EarnBlock } from "@/core/earnBlock.js";

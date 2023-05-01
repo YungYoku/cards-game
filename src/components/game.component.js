@@ -1,24 +1,24 @@
 import { Component } from "../core/component";
 import { SettingsStore } from "../stores/settings.store";
 import { CardComponent } from "./card.component";
-import card1 from "../assets/images/game/cards/1.png";
-import card2 from "../assets/images/game/cards/2.png";
-import card3 from "../assets/images/game/cards/3.png";
-import card4 from "../assets/images/game/cards/4.png";
-import card5 from "../assets/images/game/cards/5.png";
-import card6 from "../assets/images/game/cards/6.png";
-import card7 from "../assets/images/game/cards/7.png";
-import card8 from "../assets/images/game/cards/8.png";
-import card9 from "../assets/images/game/cards/9.png";
-import card10 from "../assets/images/game/cards/10.png";
-import card11 from "../assets/images/game/cards/11.png";
-import card12 from "../assets/images/game/cards/12.png";
-import card13 from "../assets/images/game/cards/13.png";
-import card14 from "../assets/images/game/cards/14.png";
-import card15 from "../assets/images/game/cards/15.png";
-import card16 from "../assets/images/game/cards/16.png";
-import card17 from "../assets/images/game/cards/17.png";
-import card18 from "../assets/images/game/cards/18.png";
+import card1 from "../assets/images/game/cards/1.webp";
+import card2 from "../assets/images/game/cards/2.webp";
+import card3 from "../assets/images/game/cards/3.webp";
+import card4 from "../assets/images/game/cards/4.webp";
+import card5 from "../assets/images/game/cards/5.webp";
+import card6 from "../assets/images/game/cards/6.webp";
+import card7 from "../assets/images/game/cards/7.webp";
+import card8 from "../assets/images/game/cards/8.webp";
+import card9 from "../assets/images/game/cards/9.webp";
+import card10 from "../assets/images/game/cards/10.webp";
+import card11 from "../assets/images/game/cards/11.webp";
+import card12 from "../assets/images/game/cards/12.webp";
+import card13 from "../assets/images/game/cards/13.webp";
+import card14 from "../assets/images/game/cards/14.webp";
+import card15 from "../assets/images/game/cards/15.webp";
+import card16 from "../assets/images/game/cards/16.webp";
+import card17 from "../assets/images/game/cards/17.webp";
+import card18 from "../assets/images/game/cards/18.webp";
 import { TimerComponent } from "./timer.component";
 import { PausePopup } from "./pause.popup";
 import { WinPopup } from "./win.popup";
@@ -69,7 +69,7 @@ export class GameComponent extends Component {
         this.pause.restart = () => {
             this.pause.showVideo();
 
-            
+
             if (window.innerWidth < 768) {
                 const closeVideoCallBack = () => {
                     this.pause.closeVideo();
