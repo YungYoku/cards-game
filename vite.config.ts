@@ -21,14 +21,16 @@ export default defineConfig({
                 "apple-touch-icon.png",
             ],
             manifest: {
-                name: "cards-game",
-                short_name: "cards-game",
+                name: "cards-pairs",
+                short_name: "cards-pairs",
                 start_url: "/",
                 display: "fullscreen",
                 background_color: "#ffffff",
                 lang: "ru",
+                orientation: "any",
+                dir: "ltr",
                 scope: "/",
-                description: "cards-game",
+                description: "cards-pairs",
                 theme_color: "#ffffff",
                 icons: [
                     {
